@@ -12,8 +12,8 @@ var jspb = require('google-protobuf');
 var goog = jspb;
 var global = Function('return this')();
 
-var oojob_github_com_protobuf_health_pb = require('../../oojob/github.com/protobuf/health_pb.js');
-goog.object.extend(proto, oojob_github_com_protobuf_health_pb);
+var github_com_oojob_protobuf_health_pb = require('../../github.com/oojob/protobuf/health_pb.js');
+goog.object.extend(proto, github_com_oojob_protobuf_health_pb);
 goog.exportSymbol('proto.urlshortner.UrlSHortnerResponse', null, global);
 goog.exportSymbol('proto.urlshortner.UrlShortner', null, global);
 /**
