@@ -2,7 +2,7 @@
 // file: services/urlshortner/service.proto
 
 import * as jspb from "google-protobuf";
-import * as oojob_protobuf_health_pb from "@oojob/oojob-protobuf/health_pb";
+import * as github_com_oojob_protobuf_health_pb from "@oojob/oojob-protobuf/health_pb";
 
 export class UrlShortner extends jspb.Message {
   getLongUrl(): string;
