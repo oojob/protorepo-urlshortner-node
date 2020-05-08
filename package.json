@@ -1,6 +1,6 @@
 {
   "name": "@oojob/protorepo-urlshortner-node",
-  "version": "1.0.1",
+  "version": "0.0.1",
   "description": "",
   "main": "service_grpc_pb.js",
   "directories": {
