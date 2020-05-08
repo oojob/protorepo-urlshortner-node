@@ -1,0 +1,33 @@
+{
+  "name": "@oojob/protorepo-urlshortner-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "service_grpc_pb.js",
+  "directories": {
+    "doc": "doc"
+  },
+  "scripts": {
+    "release": "standard-version",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oojob/protorepo-urlshortner-node.git"
+  },
+  "keywords": [],
+  "author": "nirajgeorgian <nirajgeorgian@gmail.com> (https://github.com/nirajgeorgian)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/oojob/protorepo-urlshortner-node/issues"
+  },
+  "homepage": "https://github.com/oojob/protorepo-urlshortner-node#readme",
+  "devDependencies": {
+    "@types/google-protobuf": "^3.7.2",
+    "standard-version": "^8.0.0"
+  },
+  "dependencies": {
+    "@oojob/oojob-protobuf": "0.0.2",
+    "google-protobuf": "^3.12.0-rc.1",
+    "grpc": "^1.24.2"
+  }
+}

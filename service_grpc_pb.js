@@ -13,29 +13,29 @@
 //
 'use strict';
 var grpc = require('grpc');
-var services_urlshortner_service_pb = require('../../services/urlshortner/service_pb.js');
-var github_com_oojob_protobuf_health_pb = require('../../github.com/oojob/protobuf/health_pb.js');
+var services_urlshortner_service_pb = require('./service_pb.js');
+var oojob_protobuf_health_pb = require('@oojob/oojob-protobuf/health_pb.js');
 
-function serialize_github_com_oojob_protobuf_HealthCheckRequest(arg) {
-  if (!(arg instanceof github_com_oojob_protobuf_health_pb.HealthCheckRequest)) {
-    throw new Error('Expected argument of type github.com.oojob.protobuf.HealthCheckRequest');
+function serialize_oojob_protobuf_HealthCheckRequest(arg) {
+  if (!(arg instanceof oojob_protobuf_health_pb.HealthCheckRequest)) {
+    throw new Error('Expected argument of type oojob.protobuf.HealthCheckRequest');
   }
   return new Buffer(arg.serializeBinary());
 }
 
-function deserialize_github_com_oojob_protobuf_HealthCheckRequest(buffer_arg) {
-  return github_com_oojob_protobuf_health_pb.HealthCheckRequest.deserializeBinary(new Uint8Array(buffer_arg));
+function deserialize_oojob_protobuf_HealthCheckRequest(buffer_arg) {
+  return oojob_protobuf_health_pb.HealthCheckRequest.deserializeBinary(new Uint8Array(buffer_arg));
 }
 
-function serialize_github_com_oojob_protobuf_HealthCheckResponse(arg) {
-  if (!(arg instanceof github_com_oojob_protobuf_health_pb.HealthCheckResponse)) {
-    throw new Error('Expected argument of type github.com.oojob.protobuf.HealthCheckResponse');
+function serialize_oojob_protobuf_HealthCheckResponse(arg) {
+  if (!(arg instanceof oojob_protobuf_health_pb.HealthCheckResponse)) {
+    throw new Error('Expected argument of type oojob.protobuf.HealthCheckResponse');
   }
   return new Buffer(arg.serializeBinary());
 }
 
-function deserialize_github_com_oojob_protobuf_HealthCheckResponse(buffer_arg) {
-  return github_com_oojob_protobuf_health_pb.HealthCheckResponse.deserializeBinary(new Uint8Array(buffer_arg));
+function deserialize_oojob_protobuf_HealthCheckResponse(buffer_arg) {
+  return oojob_protobuf_health_pb.HealthCheckResponse.deserializeBinary(new Uint8Array(buffer_arg));
 }
 
 function serialize_urlshortner_UrlSHortnerResponse(arg) {
@@ -77,23 +77,23 @@ var UrlShortnerServiceService = exports.UrlShortnerServiceService = {
     path: '/urlshortner.UrlShortnerService/Check',
     requestStream: false,
     responseStream: false,
-    requestType: github_com_oojob_protobuf_health_pb.HealthCheckRequest,
-    responseType: github_com_oojob_protobuf_health_pb.HealthCheckResponse,
-    requestSerialize: serialize_github_com_oojob_protobuf_HealthCheckRequest,
-    requestDeserialize: deserialize_github_com_oojob_protobuf_HealthCheckRequest,
-    responseSerialize: serialize_github_com_oojob_protobuf_HealthCheckResponse,
-    responseDeserialize: deserialize_github_com_oojob_protobuf_HealthCheckResponse,
+    requestType: oojob_protobuf_health_pb.HealthCheckRequest,
+    responseType: oojob_protobuf_health_pb.HealthCheckResponse,
+    requestSerialize: serialize_oojob_protobuf_HealthCheckRequest,
+    requestDeserialize: deserialize_oojob_protobuf_HealthCheckRequest,
+    responseSerialize: serialize_oojob_protobuf_HealthCheckResponse,
+    responseDeserialize: deserialize_oojob_protobuf_HealthCheckResponse,
   },
   watch: {
     path: '/urlshortner.UrlShortnerService/Watch',
     requestStream: false,
     responseStream: true,
-    requestType: github_com_oojob_protobuf_health_pb.HealthCheckRequest,
-    responseType: github_com_oojob_protobuf_health_pb.HealthCheckResponse,
-    requestSerialize: serialize_github_com_oojob_protobuf_HealthCheckRequest,
-    requestDeserialize: deserialize_github_com_oojob_protobuf_HealthCheckRequest,
-    responseSerialize: serialize_github_com_oojob_protobuf_HealthCheckResponse,
-    responseDeserialize: deserialize_github_com_oojob_protobuf_HealthCheckResponse,
+    requestType: oojob_protobuf_health_pb.HealthCheckRequest,
+    responseType: oojob_protobuf_health_pb.HealthCheckResponse,
+    requestSerialize: serialize_oojob_protobuf_HealthCheckRequest,
+    requestDeserialize: deserialize_oojob_protobuf_HealthCheckRequest,
+    responseSerialize: serialize_oojob_protobuf_HealthCheckResponse,
+    responseDeserialize: deserialize_oojob_protobuf_HealthCheckResponse,
   },
 };
 
