@@ -1,0 +1,38 @@
+/*
+ * Created on Sun Apr 27 2020
+ *
+ * UrlShortner entity related messages.
+ * This file is resposible for all operation related to UrlShortner entity.
+ *
+ * @authors nirajgeorgian@oojob.io (Niraj Kishore)
+ *
+ * Copyright (c) 2020 - oojob
+ */
+
+syntax = "proto3";
+
+import "github.com/oojob/protobuf/health.proto";
+
+package urlshortner;
+
+message UrlShortner {
+  string long_url = 1;
+  string short_url = 2;
+  int64 views = 3;
+  bool is_mobile = 4;
+  string operating_system = 5;
+  string ip_address = 6;
+  string user_agent = 7;
+}
+
+message UrlSHortnerResponse { bool status = 1; }
+
+service UrlShortnerService {
+  rpc GenerateUrl(UrlShortner) returns (UrlSHortnerResponse);
+
+  rpc Check(github.com.oojob.protobuf.HealthCheckRequest)
+      returns (github.com.oojob.protobuf.HealthCheckResponse);
+
+  rpc Watch(github.com.oojob.protobuf.HealthCheckRequest)
+      returns (stream github.com.oojob.protobuf.HealthCheckResponse);
+}
