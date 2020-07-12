@@ -26,7 +26,7 @@
     "@oojob/oojob-protobuf": "0.0.9",
     "google-protobuf": "^3.12.2",
     "grpc": "^1.24.3",
-    "standard-version": "^8.0.0"
+    "standard-version": "^8.0.1"
   },
   "dependencies": {}
 }
